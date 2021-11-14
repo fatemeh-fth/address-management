@@ -1,0 +1,11 @@
+<div class="page-full">
+    <div class="map">
+        <p>موقعیت مورد نظر خود را روی نقشه مشخص کنید.</p>
+    </div>
+    <div id="map-page" leaflet [leafletOptions]="options" [leafletLayers]="layers"
+        (leafletMapReady)="onMapReady($event)">
+    </div>
+    <div class="but-sign">
+        <button id="submit" (click)="onMapSubmit()">تایید موقعیت </button>
+    </div>
+</div>

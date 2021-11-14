@@ -1,0 +1,39 @@
+.page-full {
+  width: 100%;
+  height: 100%;
+}
+
+.map {
+  background: #ffffffc2;
+  position: absolute;
+  width: 100%;
+  z-index: 11111;
+}
+
+.map p {
+  text-align: center;
+}
+
+#map-page {
+  height: 500px;
+}
+
+.but-sign {
+  margin: 14px auto;
+  width: 80%;
+}
+
+#submit {
+  padding: 10px;
+
+  border: navajowhite;
+  background: #16d998;
+  color: #fff;
+  border-radius: 3px;
+  width: 100%;
+  margin-top: 32px;
+  font-weight: bold;
+}
+#submit:hover{
+  background-color: #16d9986b;
+}

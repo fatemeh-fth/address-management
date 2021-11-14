@@ -1,0 +1,111 @@
+<!-- <form class="form" #form="ngForm" (ngSubmit)="onSubmit(form)">
+    name:
+    <input type="text" name="name" ngModel>
+
+    last name:
+    <input type="text" name="lastName" ngModel>
+
+    <button type="submit">submit</button>
+</form>
+
+<hr>
+
+<form class="form" [formGroup]="reactiveForm" (ngSubmit)="onSubmitReactive()">
+    name:
+    <input type="text" formControlName="name">
+
+    last name:
+    <input type="text" formControlName="lastName">
+
+    <button type="submit">submit</button>
+</form> -->
+<div *ngIf="currentStep == 1">
+    <div class="information">
+        <p>لطفا اطلاعات ورود خود را وارد نمایید.</p>
+    </div>
+    <div class="form-sign">
+        <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+
+            <div class="section-1">
+                <div class="sign">
+                    <label>نام</label>
+                    <input type="text" formControlName="first_name">
+                    <span class="dot"
+                    [style.backgroundColor]="form.get('first_name')!.valid ? '#16d998' : '#d6d6d6'"></span>
+                </div>
+                <p
+                    *ngIf="form.get('first_name')!.hasError('required') && (form.get('first_name')!.dirty || form.get('first_name')!.touched)">
+                    این فیلد الزامیست.</p>
+                <div class="sign">
+                    <label> نام خانوادگی</label>
+                    <input type="text" formControlName="last_name">
+                    <span class="dot"
+                    [style.backgroundColor]="form.get('last_name')!.valid ? '#16d998' : '#d6d6d6'"></span>
+                </div>
+                <p
+                *ngIf="form.get('last_name')!.hasError('required') && (form.get('last_name')!.dirty || form.get('last_name')!.touched)">
+                این فیلد الزامیست.</p>
+                <div class="sign">
+                    <label> تلفن همراه </label>
+                    <input type="text" formControlName="coordinate_mobile" maxlength="11">
+                  <span class="dot"
+                [style.backgroundColor]="form.get('coordinate_mobile')!.valid ? '#16d998' : '#d6d6d6'"></span>
+                </div>
+                
+            <p
+                *ngIf="form.get('coordinate_mobile')!.hasError('required') && (form.get('coordinate_mobile')!.dirty || form.get('coordinate_mobile')!.touched)">
+                این فیلد الزامیست.</p>
+            <p
+                *ngIf="form.get('coordinate_mobile')!.hasError('pattern') && (form.get('coordinate_mobile')!.dirty || form.get('coordinate_mobile')!.touched)">
+                فرمت وارد شده نادرست است.</p>
+                <div class="sign">
+                    <label> تلفن ثابت</label>
+                    <input type="text" formControlName="coordinate_phone_number" maxlength="11">
+                    <span class="dot"
+                    [style.backgroundColor]="form.get('coordinate_phone_number')!.valid ? '#16d998' : '#d6d6d6'"></span>
+                </div>
+            
+            <p
+                *ngIf="form.get('coordinate_phone_number')!.hasError('required') && (form.get('coordinate_phone_number')!.dirty || form.get('coordinate_phone_number')!.touched)">
+                این فیلد الزامیست.</p>
+            <p
+                *ngIf="form.get('coordinate_phone_number')!.hasError('pattern') && (form.get('coordinate_phone_number')!.dirty || form.get('coordinate_phone_number')!.touched)">
+                فرمت وارد شده نادرست است.</p>
+            </div>
+            <div class="section-2">
+                <div class="address">
+                    <label id="address-label"> آدرس دقیق</label>
+                    
+                </div>
+                <div class="sign">
+                    <input type="text" formControlName="address">
+                    <span class="dot"
+                    [style.backgroundColor]="form.get('address')!.valid ? '#16d998' : '#d6d6d6'"></span>
+                </div>
+                <p
+                *ngIf="form.get('address')!.hasError('required') && (form.get('address')!.dirty || form.get('address')!.touched)">
+                این فیلد الزامیست.</p>
+                <div class="sign-gender">
+                    <div class="text-gender">
+                        <label> جنسیت</label>
+                    </div>
+                    <div class="radio-gender">
+                        <input id="male" class="gender" type="radio" value="Male" formControlName="gender">
+                        <label for="male" id="man">آقا</label>
+                        <input id="female" class="gender" type="radio" value="Female" formControlName="gender">
+                        <label for="female" id="miss">خانم</label>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            <div class="but-sign">
+                <button id="submit" type="submit" [disabled]="form.invalid">مرحله بعد</button>
+            </div>
+        </form>
+    </div>
+</div>
+<app-select-map (mapSubmit)="onMapSubmit($event)" *ngIf="currentStep == 2"></app-select-map>

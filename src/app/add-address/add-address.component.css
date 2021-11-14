@@ -1,0 +1,164 @@
+body {
+  background: #f2f2f2 !important;
+}
+
+@media only screen and (max-width: 767px) {
+
+
+  .form-sign {
+    width: 100%;
+    height: 400px;
+    float: right;
+  }
+
+
+  .sign {
+    width: 80%;
+    border: 1px solid #d6d6d6;
+    height: 32px;
+    border-radius: 3px;
+    margin: 13px auto;
+    background-color: #fff;
+    position: relative;
+  }
+
+  .sign label {
+    position: absolute;
+    display: inline-block;
+    font-size: 14px;
+    color: #4e9ac1;
+    padding: 5px;
+  }
+
+  .sign input {
+    display: block;
+    margin: 3px 14px;
+    outline: none;
+    border-style: none;
+    border-right-style: none;
+
+    transition: 0.4s;
+    height: 27px;
+    width: 65%;
+    float: left;
+
+  }
+
+  #submit {
+    padding: 10px;
+
+    border: navajowhite;
+    background: #16d998;
+    color: #fff;
+    border-radius: 3px;
+    width: 100%;
+    margin-top: 32px;
+    font-weight: bold;
+  }
+  #submit:hover{
+    background-color: #16d9986b;
+  }
+  
+
+  .but-sign {
+    margin: 14px auto;
+    width: 80%;
+  }
+
+  .information {
+
+    margin: 14px auto;
+    width: 80%;
+    border-radius: 3px;
+
+  }
+
+  .information p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #707488;
+
+  }
+
+
+
+  .sign-gender {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 12px auto;
+  }
+
+  #address-label {
+
+    font-size: 14px;
+    color: #4e9ac1;
+    padding: 5px;
+  }
+
+  .address {
+    margin: 14px auto;
+    width: 80%;
+  }
+
+  .form {
+    padding: 20px 5px;
+  }
+
+  .section-2 {
+    background: #fff;
+    padding: 10px 0px;
+    margin-top: 15px;
+}
+.section-1 {
+    background: #fff;
+    padding: 10px 0px;
+}
+
+  input[type=radio] {
+    display: none;
+  }
+
+  input[type=radio]+label {
+    border: 1px solid #4e9ac1;
+    color:#4e9ac1 ;
+  }
+
+  input[type=radio]:checked+label {
+    background-color: #4e9ac1;
+    color: #fff;
+  }
+  #miss {
+    border-radius: 5px 0px 0px 5px;
+    padding: 3px 15px;
+}
+#man{
+    border-radius: 0px 5px 5px 0px;
+    padding: 3px 15px;
+}
+.text-gender label{
+color: #4e9ac1;
+}
+p {
+    margin: 1px auto;
+    width: 80%;
+    font-size: 12px;
+    color: #7e1010;
+}
+.dot{
+    border: 1px solid #16d99800;
+    display: inline-block;
+    line-height: 15px;
+    text-align: center;
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    border-radius: 50%;
+    margin-left: 10px;
+    font-size: 12px;
+    position: absolute;
+left: 2px;
+margin-top: 5px;
+
+}
+}

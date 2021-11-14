@@ -1,0 +1,9 @@
+<button routerLink="/">add new address</button>
+
+<div class="wrapper" *ngFor="let item of list">
+    <div class="address"><span>آدرس : </span>{{item.address}}</div>
+    <div class="section-2">
+        <div class="name"><span>نام و نام خانوادگی : </span>{{item.first_name}} {{item.last_name}}</div>
+        <div class="mobile"><span>موبایل : </span>{{item.coordinate_mobile}}</div>
+    </div>
+</div>
